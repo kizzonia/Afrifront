@@ -8,8 +8,12 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="zxx" class="no-js">
 <!--<![endif]-->
+<!-- =========================================
+head
+========================================== -->
 
-<!-- Mirrored from mixmusic.intimissibd.com/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Feb 2017 23:45:30 GMT -->
+
+<!-- Mirrored from mixmusic.intimissibd.com/coming-soon.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Feb 2017 23:45:30 GMT -->
 <head>
     <!-- =========================================
     Basic
@@ -42,8 +46,6 @@
     <link rel="stylesheet" href="css/plugin.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
-
     <!-- =========================================
     Head Libs
     ========================================== -->
@@ -56,18 +58,16 @@
 </head>
 <!-- /head -->
 <!-- =========================================
-BODY
+body
 ========================================== -->
 
-<body class="error-page">
+<body class="error-page home2">
     <header class="header-area">
         <div class="container">
             <div class="row text-center">
                 <div class="col-xs-12">
                     <div class="logo">
-                        <a href="index-2.html">
-                            <img src="images/logo.png" alt="mixmusic">
-                        </a>
+                       <a href="index-2.html"> <img src="images/logo.png" alt="mixmusic"></a>
                     </div>
                 </div>
             </div>
@@ -85,12 +85,29 @@ BODY
             </div>
         </div>
     </header>
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
-                    <h1>4<span>0</span>4</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamquis nostrud exercitation.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                <div class="comingsoon">
+                    <h3>WE’ll BE BACK SOON</h3>
+                    <div class="counter">
+                        <ul>
+                            <li><span id="cday"></span>days</li>
+                            <li><span id="chours"></span>hours</li>
+                            <li><span id="cminutes"></span>minutes</li>
+                            <li><span id="cseconds"></span>seconds</li>
+                        </ul>
+                    </div>
+                    <p>OUR WEBSITE IS COMING SOON. WE’LL BE HERE SOON WITH
+                        <br /> OUR NEW IMAGINATION, SUBSCRIBE TO BE NOTIFIED.</p>
+                    <!--Mail Subscribe Form Start -->
+                    <div class="mail-subscribe">
+                        <form action="#">
+                            <input type="email" placeholder="Email Address">
+                            <button type="button" class="bttn bttn-sm">Get Update</button>
+                        </form>
+                    </div>
+                    <!--Mail Subscribe Form End -->
                 </div>
             </div>
         </div>
@@ -117,13 +134,23 @@ BODY
     ========================================== -->
     <script src="js/jplayer.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/countdown.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/pogo-slider.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/plugin.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $('.comingsoon').countdown('2017/12/31', function (event) {
+            var offset = event.offset;
+            $('#cday').text(offset.totalDays);
+            $('#chours').text(''.concat(offset.hours < 10 ? '0' : '', offset.hours));
+            $('#cminutes').text(''.concat(offset.minutes < 10 ? '0' : '', offset.minutes));
+            $('#cseconds').text(''.concat(offset.seconds < 10 ? '0' : '', offset.seconds));
+        });
+    </script>
 </body>
 
 
-<!-- Mirrored from mixmusic.intimissibd.com/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Feb 2017 23:45:30 GMT -->
+<!-- Mirrored from mixmusic.intimissibd.com/coming-soon.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Feb 2017 23:45:31 GMT -->
 </html>
